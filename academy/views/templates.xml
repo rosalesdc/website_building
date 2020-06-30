@@ -1,14 +1,13 @@
 <odoo>
     <data>
-        <!-- <template id="listing"> -->
-        <!--   <ul> -->
-        <!--     <li t-foreach="objects" t-as="object"> -->
-        <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
-        <!--         <t t-esc="object.display_name"/> -->
-        <!--       </a> -->
-        <!--     </li> -->
-        <!--   </ul> -->
-        <!-- </template> -->
+        <template id="index">
+            <title>Academy</title>
+            <t t-foreach="teachers" t-as="teacher">
+                <p>
+                    <t t-esc="teacher" />
+                </p>
+            </t>
+        </template>
         <!-- <template id="object"> -->
         <!--   <h1><t t-esc="object.display_name"/></h1> -->
         <!--   <dl> -->
