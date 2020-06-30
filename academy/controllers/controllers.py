@@ -2,7 +2,8 @@
 from odoo import http
 
 class Academy(http.Controller):
-    @http.route('/academy/academy/', auth='public')
+    #flag website sets up a few new variables on the request object and allows using the website layout in our template
+    @http.route('/academy/academy/', auth='public', website=True) 
     def index(self, **kw):
         Teachers = http.request.env['academy.teachers']
         return http.request.render('academy.index', {
